@@ -1,21 +1,50 @@
+import Button from './Button';
+import { GitHubLogo, LinkedInLogo, TwitterLogo } from '../svgs/embedded';
+
 function WelcomeMessage({ t }) {
   return (
-    <section>
-      <div className='container padding-block-900'>
-        <div>
-          <h3 className='fw-regular fs-small-sub ff-pop text-accent-400'>
-            {t('greet')}
-          </h3>
+    <section className='greeting text-primary-800'>
+      <div className='container'>
+        <div className='greeting-div width-fit'>
+          <h3 className='fw-regular fs-small-sub ff-pop'>{t('greet')}</h3>
 
-          <h1 className='fw-bold fs-heading'>Oliver Jones.</h1>
-          <h1 className='text-primary-800 fw-regular sub-heading'>
-            {t('jobRole')}
+          <h1 className='fw-bold fs-heading text-primary-800'>Oliver Jones.</h1>
+          <h1 className='fw-bold text-neutral-600 sub-heading'>
+            {`${'.builderOfWebApps()'}`}
           </h1>
-          <h2>{t('loveGradients')}</h2>
+          <h1 className='fw-bold text-neutral-600 sub-heading'>
+            {`${'.writerOfCode()'}`}
+          </h1>
+          <h1 className='fw-bold text-neutral-600 sub-heading'>
+            {`${'.userOfGradients()'}`}
+          </h1>
+          <h1 className='padding-bottom-500 fw-bold text-neutral-600 sub-heading'>
+            {`${'.loverOfMusic()'}`}
+          </h1>
 
-          <button type='button' className='button'>
-            {t('connectMe')}
-          </button>
+          <Button text={t('connectMe')} classes='button' />
+
+          {/* <a
+            href='https://github.com/ojones44'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <GitHubLogo />
+          </a> */}
+          {/* <a
+            href='https://twitter.com/oliverj1994'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <TwitterLogo />
+          </a>
+          <a
+            href='https://www.linkedin.com/in/oliverj1994'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <LinkedInLogo />
+          </a> */}
         </div>
       </div>
     </section>

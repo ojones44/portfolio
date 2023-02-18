@@ -1,5 +1,5 @@
 // React Imports
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 // Component Imports
 import { I18nProvider, LOCALES } from '../i18n';
@@ -16,20 +16,47 @@ import languages from '../i18n/languages';
 
 function Home() {
   const [locale, setLocale] = useState(LOCALES.ENGLISH);
+  const [mobNavOpen, setMobNavOpen] = useState(false);
 
-  const handleChange = (e) => {
+  const handleResize = () => {
+    if (window.innerWidth >= 800) {
+      setMobNavOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  const handleClick = () => {
+    setMobNavOpen(!mobNavOpen);
+  };
+
+  const handleLangChange = (e) => {
     setLocale(e.target.value);
   };
 
   return (
     <I18nProvider locale={locale}>
       <div className='app bg-primary-100'>
-        <Navbar t={t} languages={languages} onChange={handleChange} />
+        <Navbar
+          t={t}
+          languages={languages}
+          langChange={handleLangChange}
+          mobNavOpen={handleClick}
+          isOpen={mobNavOpen}
+        />
         <main>
           <WelcomeMessage t={t} />
-          <About t={t} />
-          <Projects t={t} />
-          <Connect t={t} />
+          <section className='bg-neutral-800 fc-netural'>
+            <About t={t} />
+            <Projects t={t} />
+            <Connect t={t} />
+          </section>
         </main>
         <Footer t={t} />
       </div>

@@ -1,9 +1,11 @@
 function Footer({ t }) {
   return (
-    <footer className='bg-neutral-100'>
-      <div>{t('footerBody')}</div>
-      <div>v1.0.0</div>
-    </footer>
+    <section className='padding-block-900 fw-bold bg-primary-100  text-primary-800'>
+      <footer className='container'>
+        <div>{t('footerBody')}</div>
+        <div>v1.0.0</div>
+      </footer>
+    </section>
   );
 }
 

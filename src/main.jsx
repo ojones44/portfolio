@@ -2,11 +2,11 @@ import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { WrappedApp } from './App';
-import OJ from './assets/oliverj.png';
+import { OliverLogo } from './svgs/embedded';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Suspense fallback={<img src={OJ} alt='OJImg' />}>
+    <Suspense fallback={<OliverLogo />}>
       <WrappedApp />
     </Suspense>
   </React.StrictMode>

@@ -3,9 +3,9 @@ import LOCALES from '../locales';
 export default {
   [LOCALES.ENGLISH]: {
     greet: 'Hi, my name is',
-    jobRole: 'Builder of web apps; lover of code;',
+    jobRole: 'I like to build web stuff',
     loveGradients: 'And of course, I love gradients.',
-    resume: 'RESUME',
+    resume: 'Resume',
     about1: 'About',
     projects2: 'Projects',
     contact3: 'Contact',

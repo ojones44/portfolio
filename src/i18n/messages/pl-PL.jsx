@@ -3,9 +3,9 @@ import LOCALES from '../locales';
 export default {
   [LOCALES.POLISH]: {
     greet: 'Cześć, nazywam się',
-    jobRole: 'Twórca aplikacji internetowych; miłośnik kodu;',
+    jobRole: 'Lubię budować rzeczy internetowe',
     loveGradients: 'No i oczywiście uwielbiam gradienty.',
-    resume: 'ŻYCIORYS',
+    resume: 'Życiorys',
     about1: 'Informacje o',
     projects2: 'Projekty',
     contact3: 'Kontakt',

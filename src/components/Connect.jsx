@@ -28,7 +28,7 @@ function Connect({ t }) {
   };
 
   return (
-    <section className='container'>
+    <section className='container padding-block-900'>
       <div>{t('contact3')}</div>
       <div>{t('contactTitle')}</div>
       <div>{t('contactBody')}</div>
@@ -82,6 +82,7 @@ function Connect({ t }) {
           <button
             type='submit'
             className='button'
+            data-type='inverted'
             // disabled={!!(!validPassword || !passwordMatch)}
           >
             Make my mobile buzz!

@@ -2,7 +2,7 @@ import oliImg from '../assets/Oli.jpg';
 
 function About({ t }) {
   return (
-    <section>
+    <section className='padding-block-900'>
       <div className='container'>
         <div>
           <h1>{t('about1')}</h1>
