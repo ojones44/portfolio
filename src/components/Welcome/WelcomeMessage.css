@@ -1,0 +1,32 @@
+/* ---------------------------------------------------------------- */
+/* -----------------General Styling - Custom Classes--------------- */
+/* ---------------------------------------------------------------- */
+
+.landing {
+  height: calc(100vh - 99px);
+}
+
+.center-v {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.greeting-div {
+  width: fit-content;
+  margin-left: max(10px, 20%);
+}
+
+.greeting-div p {
+  font-weight: var(--fw-bold);
+  color: var(--clr-neutral-600);
+  font-size: var(--fs-sub-heading);
+  /* opacity: 0.7; */
+}
+
+.social-nav {
+  display: flex;
+  gap: 2rem;
+  padding-top: 2rem;
+  padding-left: 0.5rem;
+}

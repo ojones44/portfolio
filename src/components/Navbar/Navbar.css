@@ -1,0 +1,218 @@
+/* ---------------------------------------------------------------- */
+/* -----------------General Styling - Custom Classes--------------- */
+/* ---------------------------------------------------------------- */
+
+.flag {
+  width: 30px;
+  padding-right: 7px;
+}
+
+.flag-mob {
+  width: 23px;
+}
+
+.btn-flag {
+  background: var(--clr-gradient-55);
+  padding: 0.5em 1.25em;
+}
+
+.btn-flag-mob {
+  display: none;
+}
+
+.btn-flag:hover,
+.btn-flag:focus-visible {
+  background-color: var(--clr-neutral-800);
+  color: var(--clr-neutral-100);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+/* ---------------------------------------------------------------- */
+/* ---------------------------Navigation--------------------------- */
+/* ---------------------------------------------------------------- */
+
+.heading {
+  padding-top: var(--size-600);
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mobile-nav-toggle {
+  display: none;
+}
+
+.primary-nav {
+  font-size: var(--fs-nav);
+  display: flex;
+}
+
+.secondary-nav {
+  position: absolute;
+  max-width: 25rem;
+  margin-inline: auto;
+  padding: var(--size-700);
+  inset: 7rem var(--size-400) auto;
+  background: black;
+  border-radius: var(--size-400);
+  box-shadow: 0 1.25em 1em -1em var(--clr-neutral-800);
+  text-align: center;
+}
+
+.language-select {
+  position: absolute;
+  max-width: 15rem;
+  margin-inline: auto 1rem;
+  padding: var(--size-700);
+  inset: 7rem var(--size-400) auto;
+  background: black;
+  border-radius: var(--size-400);
+  box-shadow: 0 1.25em 1em -1em var(--clr-neutral-800);
+  text-align: center;
+}
+
+body:has(.requires-no-scroll) {
+  overflow: hidden;
+}
+
+.width-fit {
+  width: fit-content;
+}
+
+.nav-list-sm {
+  display: grid;
+  gap: var(--size-900);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+}
+
+.nav-list-lang-select {
+  display: grid;
+  gap: var(--size-500);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+}
+
+.nav-list-sm a {
+  text-decoration: none;
+  color: var(--clr-neutral-100);
+}
+
+.nav-list-sm a:hover,
+.nav-list-sm a:focus {
+  color: var(--clr-gradient-55);
+}
+
+.nav-list {
+  display: flex;
+  gap: var(--size-700);
+  font-weight: var(--fw-bold);
+  font-family: var(--ff-accent);
+  align-items: center;
+}
+
+.nav-list select {
+  font-weight: var(--fw-regular);
+  font-family: var(--ff-body);
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--clr-neutral-800);
+}
+
+.nav-list a:hover,
+.nav-list a:focus {
+  color: var(--clr-neutral-600);
+}
+
+@media (max-width: 50em) {
+  .primary-nav {
+    display: none;
+  }
+  .btn-flag-mob {
+    display: inline-flex;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid black;
+    background: black;
+    border-radius: 100vmax;
+    padding: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-btn);
+    font-family: var(--ff-pop);
+  }
+  .mobile-nav-toggle {
+    display: block;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    padding: 0.5em;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* -----------------------Navbar animations------------------------ */
+/* ---------------------------------------------------------------- */
+
+ul {
+  display: flex;
+  align-items: start;
+  list-style-type: none;
+}
+
+ul li a.underline {
+  position: relative;
+  display: block;
+  color: black;
+  padding: 1px 0;
+  transition: 0.5s;
+}
+
+ul li a.underline.mobile {
+  color: white;
+}
+
+ul li a.underline::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  top: 100%;
+  left: 0;
+  background: var(--clr-neutral-800);
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.secondary-nav ul li a::after {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 1.5px;
+  top: 100%;
+  left: 0;
+  background: var(--clr-gradient-55);
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+ul li a:hover {
+  color: var(--clr-accent-300);
+}
+
+ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.blur {
+  /* -webkit-filter: blur(2px); */
+  filter: blur(2px);
+}

@@ -6,6 +6,8 @@ const projects = [
     description: 'projectDesc1',
     languages: ['react', 'typescript', 'node.js', 'express.js'],
     database: 'MongoDB',
+    repo: null,
+    demo: null,
   },
   {
     // Finance Tracker
@@ -14,15 +16,39 @@ const projects = [
     description: 'projectDesc2',
     languages: ['react', 'javascript', 'node.js', 'express.js'],
     database: 'MongoDB',
+    repo: null,
+    demo: null,
   },
   {
-    // Harry Potter API
+    // Bug Tracker
     id: 2,
     name: 'projectName3',
     description: 'projectDesc3',
     languages: ['react', 'javascript', 'node.js', 'express.js'],
     database: 'MongoDB',
+    repo: null,
+    demo: null,
   },
+  // {
+  // Space Invaders
+  //   id: 2,
+  //   name: 'projectName3',
+  //   description: 'projectDesc3',
+  //   languages: ['python'],
+  //   database: null,
+  //   repo: null,
+  //   demo: null,
+  // },
+  // {
+  // Telling the time in Polish - Duolingo clone
+  //   id: 2,
+  //   name: 'projectName3',
+  //   description: 'projectDesc3',
+  //   languages: ['react', 'javascript', 'node.js', 'express.js'],
+  //   database: null,
+  //   repo: null,
+  //   demo: null,
+  // },
 ];
 
 export default projects;
