@@ -15,15 +15,15 @@ export default {
     contactTitle: 'Skontaktuj się ze mną!',
     contactBody:
       'Obecnie szukam możliwości w branży technologicznej. Moja skrzynka mailowa jest zawsze otwarta - chętnie się odezwę! Dziękuję za sprawdzenie mojego portfolio.',
-    projectName1: 'CNC Machine Scheduler',
+    projectName1: 'Generator haseł',
     projectDesc1:
-      'Jest to aplikacja do śledzenia, monitorowania, aktualizacji i harmonogramu wszystkich aspektów fabryki obróbki CNC. Po pracy w firmie lotniczej dla 11 lat, gdzie duża część mojej pracy jako inżynier programowania CNC było zapewnienie danych maszyny był aktualny, aby umożliwić dokładne planowanie i efektywnej produkcji - nie było tylko tak daleko mogę iść z arkusza kalkulacyjnego Excel. Wprowadź tę aplikację!',
-    projectName2: 'Finance Tracker',
+      'Aplikacja do generowania bezpiecznych haseł przy użyciu HTML, CSS i JavaScript.',
+    projectName2: 'React Calculator App',
     projectDesc2:
-      'Aplikacja internetowa, która pozwoli Ci utrzymać porządek w Twoich finansach! Finanse to coś, co mnie pasjonuje i od lat chciałem mieć aplikację, której mógłbym używać do śledzenia własnych finansów. Nigdy nie mogłem znaleźć niczego, co by mi odpowiadało. Więc po nauczeniu się kodowania, postanowiłem stworzyć własną aplikację.',
-    projectName3: 'Bug Tracker',
+      'Aplikacja kalkulatora stworzona za pomocą React i haka useReducer.',
+    projectName3: 'Przelicznik walut',
     projectDesc3:
-      'Aplikacja do śledzenia tych pesky bugów, które wszyscy kochamy w bazie kodu!',
+      'Cofnij zegar dzięki tej aplikacji do przeliczania walut w stylu Windows 95',
     formFName: 'Imię',
     formLName: 'Nazwisko',
     formEmail: 'Email',

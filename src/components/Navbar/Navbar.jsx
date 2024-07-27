@@ -24,30 +24,24 @@ function Navbar({
   locale,
 }) {
   return (
-    <header className='heading'>
-      <div className='container'>
-        <div className='nav-wrapper'>
-          <Link to='/'>
-            <OliverLogo />
-          </Link>
-          <DesktopNav t={t} locale={locale} langNavOpen={langNavOpen} />
-          {isMobNavOpen && <MobileMenu t={t} />}
-          <MobileNav
-            onClick={mobNavOpen}
-            isMobNavOpen={isMobNavOpen}
-            langNavOpen={langNavOpen}
-            locale={locale}
-          />
-          {isLangNavOpen && (
-            <LanguageMenu
-              t={t}
-              langs={languages}
-              langChange={langChange}
-              locale={locale}
-            />
-          )}
-        </div>
-      </div>
+    <header className='nav-wrapper'>
+      <OliverLogo />
+      <DesktopNav t={t} locale={locale} langNavOpen={langNavOpen} />
+      {isMobNavOpen && <MobileMenu t={t} onClick={mobNavOpen} />}
+      <MobileNav
+        onClick={mobNavOpen}
+        isMobNavOpen={isMobNavOpen}
+        langNavOpen={langNavOpen}
+        locale={locale}
+      />
+      {isLangNavOpen && (
+        <LanguageMenu
+          t={t}
+          langs={languages}
+          langChange={langChange}
+          locale={locale}
+        />
+      )}
     </header>
   );
 }

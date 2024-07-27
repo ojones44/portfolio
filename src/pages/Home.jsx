@@ -7,7 +7,7 @@ import t from '../i18n/messages/translate';
 import Navbar from '../components/Navbar/Navbar';
 import WelcomeMessage from '../components/Welcome/WelcomeMessage';
 import About from '../components/About/About';
-import { Projects } from '../components/Projects/Projects';
+import Projects from '../components/Projects/Projects';
 import Connect from '../components/Connect/Connect';
 import Footer from '../components/Footer/Footer';
 
@@ -66,7 +66,7 @@ function Home() {
   return (
     <I18nProvider locale={locale}>
       <div className='app bg-primary-100'>
-        <section className='top-section'>
+        <section className='section-height-100vh'>
           <Navbar
             t={t}
             languages={languages}
@@ -80,11 +80,9 @@ function Home() {
           />
           <WelcomeMessage t={t} />
         </section>
-        <section className='bg-neutral-800 fc-netural'>
-          <About t={t} />
-          <Projects t={t} />
-          <Connect t={t} />
-        </section>
+        <About t={t} />
+        <Projects t={t} />
+        <Connect t={t} />
         <Footer t={t} />
       </div>
     </I18nProvider>

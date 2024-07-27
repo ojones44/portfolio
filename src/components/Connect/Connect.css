@@ -1,0 +1,24 @@
+/* ---------------------------------------------------------------- */
+/* -----------------General Styling - Custom Classes--------------- */
+/* ---------------------------------------------------------------- */
+
+#connect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+#connect h3 {
+  color: var(--clr-gradient-100);
+}
+
+#connect h2 {
+  font-size: var(--fs-700);
+}
+
+#connect p {
+  max-width: 500px;
+}

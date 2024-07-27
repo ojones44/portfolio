@@ -3,18 +3,18 @@
 /* ---------------------------------------------------------------- */
 
 .landing {
-  height: calc(100vh - 99px);
+  height: calc(100vh - 139px);
 }
 
 .center-v {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
 .greeting-div {
-  width: fit-content;
-  margin-left: max(10px, 20%);
+  width: max-content;
+  margin-left: clamp(1rem, 15% + 10vw, 25rem);
 }
 
 .greeting-div p {
@@ -24,9 +24,87 @@
   /* opacity: 0.7; */
 }
 
+.greeting-div h3 {
+  transform: translateY(30px);
+  animation: text-in 1s forwards;
+  animation-delay: 0.5s;
+  opacity: 0;
+}
+
+.greeting-div h1 {
+  transform: translateY(40px);
+  animation: text-in 1.2s forwards;
+  animation-delay: 0.75s;
+  opacity: 0;
+}
+
+.landing button {
+  transform: translateX(-20px);
+  animation: text-in 1.2s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+section.scroll {
+  padding-bottom: 0.5rem;
+}
+
+section.scroll > div {
+  font-size: 1.5rem;
+  display: inline-block;
+  text-align: left;
+  height: 40px;
+  line-height: 0;
+  overflow: hidden;
+  animation: text-in 1.5s forwards;
+  animation-delay: 1s;
+  opacity: 0;
+}
+
+div.word-scroll span {
+  display: block;
+  margin: 0;
+  height: 40px;
+}
+div.word-scroll {
+  position: relative;
+  margin-top: 20px;
+  animation: cycle ease 10s infinite;
+  animation-delay: 2s;
+}
+
 .social-nav {
   display: flex;
   gap: 2rem;
   padding-top: 2rem;
   padding-left: 0.5rem;
+}
+
+.social-nav a > svg {
+  font-size: var(--fs-400-fix);
+  transform: translateY(20px);
+  transition: all 0.15s linear;
+}
+
+.social-nav a:hover svg {
+  translate: 0px -4px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.github svg {
+  animation: text-in 0.3s forwards cubic-bezier(0, 2.4, 0.89, 1);
+  animation-delay: 1.5s;
+  opacity: 0;
+}
+
+.linkedin svg {
+  animation: text-in 0.3s forwards cubic-bezier(0, 2.4, 0.89, 1);
+  animation-delay: 1.65s;
+  opacity: 0;
+}
+
+.twitter svg {
+  animation: text-in 0.3s forwards cubic-bezier(0, 2.4, 0.89, 1);
+  animation-delay: 1.8s;
+  opacity: 0;
 }

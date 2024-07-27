@@ -1,3 +1,174 @@
 /* ---------------------------------------------------------------- */
 /* -----------------General Styling - Custom Classes--------------- */
 /* ---------------------------------------------------------------- */
+
+/* .heading {
+  font-size: 3rem;
+  text-align: center;
+  padding: 2rem;
+} */
+
+.photo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1;
+  min-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  transition: flex 0.75s ease;
+  position: relative;
+  height: 375px;
+  margin-bottom: 2rem;
+  border-radius: 1rem;
+  outline: 5px solid var(--clr-neutral-800);
+  outline-offset: 5px;
+  overflow: hidden;
+}
+
+.card:hover {
+  flex: 1.1;
+}
+
+#password {
+  background-image: url(../../assets/password.jpg);
+}
+
+#calculator {
+  background-image: url(../../assets/calculator.jpg);
+}
+
+#currency {
+  background-image: url(../../assets/currency.jpg);
+}
+
+#fletnix {
+  background-image: url(../../assets/fletnix.png);
+}
+
+#tic-tac-toe {
+  background-image: url(../../assets/tic-tac-toe.png);
+}
+
+#flipacoin {
+  background-image: url(../../assets/flipacoin.jpg);
+}
+
+#blog {
+  background-image: url(../../assets/blog.png);
+}
+
+#space-invaders {
+  background-image: url(../../assets/space-invaders.png);
+}
+
+.card-title {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: var(--fs-500);
+  /* background-color: rgba(51, 51, 51, 0.3); */
+  width: fit-content;
+  margin-inline: auto;
+  font-weight: 700;
+  text-align: center;
+}
+
+.card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  width: 100%;
+}
+
+.links {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 75%;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+.links button {
+  min-width: max-content;
+  font-size: var(--fs-300-fix);
+  cursor: pointer;
+  color: black;
+  font-weight: 600;
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 100vmax;
+  padding: 0.5em 1.5em;
+  box-shadow: 0 1.25em 1em -1em var(--clr-neutral-800);
+  background-color: rgb(224, 161, 187);
+}
+
+.links button:hover,
+.links button:focus-visible {
+  background-color: rgba(174, 202, 209, 1);
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+}
+
+.card .overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color, backdrop-filter 2s ease;
+}
+
+.card:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+}
+
+.card:hover .description {
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.description {
+  font-family: var(--ff-pop);
+  opacity: 0;
+  z-index: 2;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+  max-width: 40ch;
+  transition: opacity 2s;
+  transform: translateY(30px);
+  transition: transform 1s;
+  height: 48px;
+}
+
+.codey-codey {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--fs-600-fix);
+  margin-bottom: 1rem;
+}
+
+.codey-codey img {
+  height: 2rem;
+}
+
+small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}

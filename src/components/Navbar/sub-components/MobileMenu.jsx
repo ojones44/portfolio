@@ -1,27 +1,46 @@
-function MobileMenu({ t }) {
+// Component Imports
+import { ButtonLink } from '../../Buttons';
+
+// Asset Imports
+import cvPDF from '../../../assets/oliverj_cv.pdf';
+
+function MobileMenu({ t, onClick }) {
+  const handleScroll = (e, scrollTo) => {
+    e.preventDefault();
+    document.getElementById(scrollTo).scrollIntoView();
+    onClick();
+  };
+
   return (
     <nav className='secondary-nav requires-no-scroll' id='secondary-nav'>
       <div className='width-fit'>
         <ul aria-label='Secondary' className='nav-list-sm'>
           <li>
-            <a className='underline mobile' href='#about'>
+            <div
+              className='underline mobile'
+              onClick={(e) => handleScroll(e, 'about')}
+            >
               {t('about1')}
-            </a>
+            </div>
           </li>
           <li>
-            <a className='underline mobile' href='#projects'>
+            <div
+              className='underline mobile'
+              onClick={(e) => handleScroll(e, 'projects')}
+            >
               {t('projects2')}
-            </a>
+            </div>
           </li>
           <li>
-            <a className='underline mobile' href='#contact'>
+            <div
+              className='underline mobile'
+              onClick={(e) => handleScroll(e, 'connect')}
+            >
               {t('contact3')}
-            </a>
+            </div>
           </li>
           <li>
-            <button type='button' className='btn' data-type='inverted'>
-              {t('resume')}
-            </button>
+            <ButtonLink body={t('resume')} classes='btn' link={cvPDF} />
           </li>
         </ul>
       </div>

@@ -2,53 +2,55 @@
 import './WelcomeMessage.css';
 
 // Component Imports
-import GitHubIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
+import { FiGithub } from 'react-icons/fi';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FaXTwitter } from 'react-icons/fa6';
 import { Button } from '../Buttons';
-
-const socialsSX = {
-  fontSize: 30,
-  color: 'black',
-  '&:hover': {
-    color: 'gray',
-  },
-};
 
 function WelcomeMessage({ t }) {
   return (
     <section className='landing center-v'>
-      <div className='container'>
+      <div className=''>
         <div className='greeting-div'>
           <h3 className='fw-regular fs-small-sub ff-pop'>{t('greet')}</h3>
           <h1 className='fw-bold fs-heading text-primary-800'>Oliver Jones.</h1>
-          <p>{`${'.builderOfWebApps()'}`}</p>
-          <p>{`${'.writerOfCode()'}`}</p>
-          <p>{`${'.userOfGradients()'}`}</p>
-          <p className='padding-bottom-500'>{`${'.loverOfMusic()'}`}</p>
+          <section className='scroll flow'>
+            <div>
+              <div className='word-scroll'>
+                <span>Writer of Code 👨🏻‍💻</span>
+                <span>Player of Guitar 🎸</span>
+                <span>Drinker of Coffee ☕</span>
+                <span>Fan of Formula 1 🏎️</span>
+                <span>Lover of Music 🎵</span>
+                <span>Speaker of Polish 🥟</span>
+              </div>
+            </div>
+          </section>
           <Button body={t('connectMe')} />
           <div className='social-nav'>
             <a
               href='https://github.com/ojones44'
               target='_blank'
               rel='noreferrer'
+              className='github'
             >
-              <GitHubIcon sx={socialsSX} />
+              <FiGithub />
             </a>
             <a
               href='https://www.linkedin.com/in/oliverj1994'
               target='_blank'
               rel='noreferrer'
-              className='social-button'
+              className='linkedin'
             >
-              <LinkedInIcon sx={socialsSX} />
+              <FaLinkedinIn />
             </a>
             <a
               href='https://twitter.com/oliverj1994'
               target='_blank'
               rel='noreferrer'
+              className='twitter'
             >
-              <TwitterIcon sx={socialsSX} />
+              <FaXTwitter />
             </a>
           </div>
         </div>

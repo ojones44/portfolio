@@ -1,94 +1,21 @@
-import { useState } from 'react';
+import './Connect.css';
+import { ButtonLink } from '../Buttons';
 
 function Connect({ t }) {
-  const [formData, setFormData] = useState({
-    fName: '',
-    lName: '',
-    email: '',
-    message: '',
-  });
-
-  const { fName, lName, email, message } = formData;
-
-  const handleSubmit = (e) => {
-    console.log('Your message has been submitted');
-    console.log({
-      name: `${fName} ${lName}`,
-      message,
-    });
-    e.preventDefault();
-  };
-
-  const onChange = (e) => {
-    setFormData((prevValues) => ({
-      ...prevValues,
-      [e.target.name]: e.target.value,
-    }));
-    console.log(e.target.value);
-  };
-
   return (
-    <section className='container padding-block-900'>
-      <div>{t('contact3')}</div>
-      <div>{t('contactTitle')}</div>
-      <div>{t('contactBody')}</div>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <label htmlFor='html'>{t('formFName')}</label>
-          <input
-            type='text'
-            className=''
-            id='fName'
-            name='fName'
-            value={fName}
-            onChange={onChange}
-            required
-            // autoComplete='off'
-          />
-          <label htmlFor='html'>{t('formLName')}</label>
-          <input
-            type='text'
-            className=''
-            id='lName'
-            name='lName'
-            value={lName}
-            onChange={onChange}
-            required
-            // autoComplete='off'
-          />
-          <label htmlFor='html'>{t('formEmail')}</label>
-          <input
-            type='email'
-            className=''
-            id='email'
-            name='email'
-            value={email}
-            onChange={onChange}
-            required
-            // autoComplete='off'
-          />
-          <label htmlFor='html'>{t('formMessage')}</label>
-          <input
-            type='text'
-            className=''
-            id='message'
-            name='message'
-            value={message}
-            onChange={onChange}
-            required
-            // autoComplete='off'
-          />
+    <section
+      id='connect'
+      className='container fc-neutral bg-neutral-800 section-height-100vh padding-block-900 connect'
+    >
+      <h3 className='fs-small-sub ff-pop'>{t('contact3')}</h3>
+      <h2 className='fw-bold'>{t('contactTitle')}</h2>
+      <p className='fc-neutral-200'>{t('contactBody')}</p>
 
-          <button
-            type='submit'
-            className='button'
-            data-type='inverted'
-            // disabled={!!(!validPassword || !passwordMatch)}
-          >
-            Make my mobile buzz!
-          </button>
-        </form>
-      </div>
+      <ButtonLink
+        body={t('connectMe')}
+        link='mailto:oliverjjones1994@gmail.com'
+        inverted
+      />
     </section>
   );
 }

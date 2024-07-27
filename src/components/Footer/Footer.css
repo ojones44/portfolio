@@ -1,0 +1,22 @@
+/* ---------------------------------------------------------------- */
+/* -----------------General Styling - Custom Classes--------------- */
+/* ---------------------------------------------------------------- */
+
+footer {
+  text-align: center;
+}
+
+footer svg {
+  margin: 0 auto;
+  font-size: var(--fs-450-fix);
+  cursor: pointer;
+  transition: all 0.15s linear;
+}
+
+footer div {
+  padding-top: 1rem;
+}
+
+footer svg:hover {
+  translate: 0px -4px;
+}
