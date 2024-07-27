@@ -3,7 +3,7 @@
 /* ---------------------------------------------------------------- */
 
 .landing {
-  height: calc(100vh - 139px);
+  height: calc(100dvh - 139px);
 }
 
 .center-v {
@@ -14,7 +14,7 @@
 
 .greeting-div {
   width: max-content;
-  margin-left: clamp(1rem, 15% + 10vw, 25rem);
+  margin-left: clamp(1rem, 5% + 10vw, 25rem);
 }
 
 .greeting-div p {

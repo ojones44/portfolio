@@ -66,7 +66,7 @@ function Home() {
   return (
     <I18nProvider locale={locale}>
       <div className='app bg-primary-100'>
-        <section className='section-height-100vh'>
+        <section className='section-height-100dvh'>
           <Navbar
             t={t}
             languages={languages}

@@ -5,7 +5,7 @@ function Connect({ t }) {
   return (
     <section
       id='connect'
-      className='container fc-neutral bg-neutral-800 section-height-100vh padding-block-900 connect'
+      className='container fc-neutral bg-neutral-800 section-height-100dvh padding-block-900 connect'
     >
       <h3 className='fs-small-sub ff-pop'>{t('contact3')}</h3>
       <h2 className='fw-bold'>{t('contactTitle')}</h2>

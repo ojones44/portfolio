@@ -5,7 +5,7 @@ function About({ t }) {
   return (
     <section
       id='about'
-      className='container fc-neutral bg-neutral-800 section-height-100vh fs-body padding-block-900 flow'
+      className='container fc-neutral bg-neutral-800 section-height-100dvh fs-body padding-block-900 flow'
     >
       <h2 className='sub-heading fs-sub-heading fw-bold'>{t('about1')}</h2>
       <div className='about-layout fc-neutral-200'>
