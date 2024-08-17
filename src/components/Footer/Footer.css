@@ -4,6 +4,7 @@
 
 footer {
   text-align: center;
+  padding-block: 1.5rem;
 }
 
 footer svg {
@@ -15,6 +16,7 @@ footer svg {
 
 footer div {
   padding-top: 1rem;
+  text-decoration: underline;
 }
 
 footer svg:hover {

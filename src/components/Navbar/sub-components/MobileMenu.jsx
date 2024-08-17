@@ -40,7 +40,7 @@ function MobileMenu({ t, onClick }) {
             </div>
           </li>
           <li>
-            <ButtonLink body={t('resume')} classes='btn' link={cvPDF} />
+            <ButtonLink inverted body={t('resume')} link={cvPDF} />
           </li>
         </ul>
       </div>

@@ -59,7 +59,7 @@
   --fs-heading: max(var(--fs-900), var(--fs-700-fix));
   --fs-sub-heading: max(var(--fs-500), var(--fs-400-fix));
   --fs-small-sub: var(--fs-450-fix);
-  --fs-body: var(--fs-400-fix);
+  --fs-body: max(var(--fs-450), var(--fs-300-fix));
   --fs-nav: var(--fs-300-fix);
   --fs-btn: var(--fs-300-fix);
 

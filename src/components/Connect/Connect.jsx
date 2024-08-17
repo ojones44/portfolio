@@ -1,4 +1,7 @@
 import './Connect.css';
+
+// component imports
+import Socials from '../Socials/Socials';
 import { ButtonLink } from '../Buttons';
 
 function Connect({ t }) {
@@ -13,9 +16,11 @@ function Connect({ t }) {
 
       <ButtonLink
         body={t('connectMe')}
+        s
         link='mailto:oliverjjones1994@gmail.com'
         inverted
       />
+      <Socials inverted />
     </section>
   );
 }

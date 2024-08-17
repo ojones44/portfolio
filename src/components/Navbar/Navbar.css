@@ -58,6 +58,7 @@
   border-radius: var(--size-400);
   box-shadow: 0 1.25em 1em -1em var(--clr-neutral-800);
   text-align: center;
+  z-index: 999;
 }
 
 .language-select {

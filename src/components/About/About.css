@@ -9,7 +9,7 @@
 }
 
 .about-me-text p {
-  font-size: var(--fs-400-fix);
+  /* font-size: var(--fs-400-fix); */
   margin-bottom: var(--size-300);
   /* text-align: justify; */
 }

@@ -7,13 +7,13 @@ function ProjectCard({ name, desc, projectId, demo, repo, languages }) {
           {demo && (
             <button type='button'>
               <a href={demo} target='_blank' rel='noreferrer'>
-                Live Demo
+                Demo
               </a>
             </button>
           )}
           <button type='button'>
             <a href={repo} target='_blank' rel='noreferrer'>
-              Github
+              GitHub
             </a>
           </button>
         </div>

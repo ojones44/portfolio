@@ -88,7 +88,12 @@ div.word-scroll {
 
 .social-nav a:hover svg {
   translate: 0px -4px;
-  color: rgba(0, 0, 0, 0.8);
+  color: rgb(28, 28, 28);
+}
+
+.social-nav[data-type='inverted'] a:hover svg {
+  translate: 0px -4px;
+  color: var(--clr-neutral-200);
 }
 
 .github svg {
