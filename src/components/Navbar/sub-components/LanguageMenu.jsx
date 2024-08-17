@@ -1,19 +1,19 @@
-function LanguageMenu({ langs, langChange }) {
+function LanguageMenu({ languages, handleLangChange }) {
   return (
     <nav className='secondary-nav language-select requires-no-scroll'>
       <div className='width-fit'>
         <ul aria-label='Secondary' className='nav-list-lang-select'>
-          {langs.map((item) => (
+          {languages.map((language) => (
             <button
-              value={item.locale}
-              onClick={langChange}
+              key={language.locale}
+              onClick={() => handleLangChange(language.locale)}
               type='button'
               className='btn btn-flag display-md-inline-flex primary-nav'
             >
               <span>
-                <img className='flag' src={item.img} alt={item.lang} />
+                <img className='flag' src={language.img} alt={language.lang} />
               </span>
-              {item.lang}
+              {language.lang}
             </button>
           ))}
         </ul>

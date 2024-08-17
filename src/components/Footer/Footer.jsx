@@ -1,8 +1,10 @@
 // CSS Import
 import './Footer.css';
 import { FaRocket } from 'react-icons/fa';
+// import { useTranslation } from 'react-i18next';
+import t from '../../i18n/messages/translate';
 
-function Footer({ t }) {
+function Footer() {
   return (
     <footer className='container bg-primary-100'>
       <FaRocket onClick={() => window.scrollTo(0, 0)} />

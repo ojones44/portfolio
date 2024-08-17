@@ -1,4 +1,4 @@
-function ProjectCard({ name, desc, projectId, demo, repo, languages }) {
+function ProjectCard({ name, desc, projectId, demo, repo, projectLanguages }) {
   return (
     <section id={projectId} className='card'>
       <div className='content'>
@@ -18,8 +18,10 @@ function ProjectCard({ name, desc, projectId, demo, repo, languages }) {
           </button>
         </div>
         <code className='codey-codey'>
-          {languages.map((lang) => (
-            <p className='language'>{lang}</p>
+          {projectLanguages.map((lang, i) => (
+            <p key={`tech-${i}`} className='language'>
+              {lang}
+            </p>
           ))}
         </code>
       </div>

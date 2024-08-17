@@ -1,4 +1,4 @@
-function Button({ classes, body, onClick, inverted }) {
+function Button({ children, classes, onClick, inverted }) {
   return (
     <button
       type='button'
@@ -6,7 +6,7 @@ function Button({ classes, body, onClick, inverted }) {
       className={classes}
       onClick={onClick}
     >
-      {body}
+      {children}
     </button>
   );
 }

@@ -3,7 +3,6 @@ import React, { useState, useEffect } from 'react';
 
 // Component Imports
 import { I18nProvider, LOCALES } from '../i18n';
-import t from '../i18n/messages/translate';
 import Navbar from '../components/Navbar/Navbar';
 import WelcomeMessage from '../components/Welcome/WelcomeMessage';
 import About from '../components/About/About';
@@ -43,16 +42,24 @@ function Home() {
     localStorage.setItem('languageCode', locale);
   }, [locale]);
 
-  const handleLangChange = (e) => {
-    setLocale(e.target.value);
+  const handleLangChange = (l) => {
+    console.log(l);
+    setLocale(l);
     setLangNavOpen(false);
 
-    languages.forEach((language) => {
-      if (language.locale === e.target.value) {
-        setDisplayLang(e.target.value);
-        localStorage.setItem('language', language.lang);
-      }
-    });
+    const newLanguage = languages.find((language) => language.locale === l);
+    console.log(newLanguage);
+    if (newLanguage) {
+      setDisplayLang(newLanguage.lang);
+      localStorage.setItem('language', newLanguage.lang);
+    }
+
+    // languages.forEach((language) => {
+    //   if (language.locale === e.target.value) {
+    //     setDisplayLang(e.target.value);
+    //     localStorage.setItem('language', language.lang);
+    //   }
+    // });
   };
 
   const handleMobNavOpen = () => {
@@ -68,9 +75,8 @@ function Home() {
       <div className='app bg-primary-100'>
         <section className='section-height-100dvh'>
           <Navbar
-            t={t}
             languages={languages}
-            langChange={handleLangChange}
+            handleLangChange={handleLangChange}
             mobNavOpen={handleMobNavOpen}
             langNavOpen={handleLangNavOpen}
             isLangNavOpen={langNavOpen}
@@ -78,12 +84,12 @@ function Home() {
             displayLang={displayLang}
             locale={locale}
           />
-          <WelcomeMessage t={t} />
+          <WelcomeMessage />
         </section>
-        <About t={t} />
-        <Projects t={t} />
-        <Connect t={t} />
-        <Footer t={t} />
+        <About />
+        <Projects />
+        <Connect />
+        <Footer />
       </div>
     </I18nProvider>
   );

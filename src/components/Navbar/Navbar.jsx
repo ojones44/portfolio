@@ -1,5 +1,4 @@
 // React Imports
-import { Link } from 'react-router-dom';
 
 // CSS Imports
 import './Navbar.css';
@@ -14,9 +13,8 @@ import DesktopNav from './sub-components/DesktopNav';
 import { OliverLogo } from '../../svgs/embedded';
 
 function Navbar({
-  t,
   languages,
-  langChange,
+  handleLangChange,
   mobNavOpen,
   langNavOpen,
   isLangNavOpen,
@@ -26,8 +24,15 @@ function Navbar({
   return (
     <header className='nav-wrapper'>
       <OliverLogo />
-      <DesktopNav t={t} locale={locale} langNavOpen={langNavOpen} />
-      {isMobNavOpen && <MobileMenu t={t} onClick={mobNavOpen} />}
+      <DesktopNav locale={locale} langNavOpen={langNavOpen} />
+      {isMobNavOpen && (
+        <MobileMenu
+          onClick={mobNavOpen}
+          langNavOpen={langNavOpen}
+          locale={locale}
+          handleLangChange={handleLangChange}
+        />
+      )}
       <MobileNav
         onClick={mobNavOpen}
         isMobNavOpen={isMobNavOpen}
@@ -36,9 +41,8 @@ function Navbar({
       />
       {isLangNavOpen && (
         <LanguageMenu
-          t={t}
-          langs={languages}
-          langChange={langChange}
+          languages={languages}
+          handleLangChange={handleLangChange}
           locale={locale}
         />
       )}

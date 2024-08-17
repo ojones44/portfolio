@@ -1,10 +1,12 @@
 import './Connect.css';
 
 // component imports
+// import { useTranslation } from 'react-i18next';
+import t from '../../i18n/messages/translate';
 import Socials from '../Socials/Socials';
 import { ButtonLink } from '../Buttons';
 
-function Connect({ t }) {
+function Connect() {
   return (
     <section
       id='connect'

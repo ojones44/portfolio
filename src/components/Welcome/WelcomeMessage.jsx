@@ -2,10 +2,16 @@
 import './WelcomeMessage.css';
 
 // Component Imports
+// import { useTranslation } from 'react-i18next';
+import t from '../../i18n/messages/translate';
 import Socials from '../Socials/Socials';
 import { Button } from '../Buttons';
 
-function WelcomeMessage({ t }) {
+// i18n imports
+
+function WelcomeMessage() {
+  // const { t } = useTranslation();
+
   const handleScroll = (e, scrollTo) => {
     e.preventDefault();
     document.getElementById(scrollTo).scrollIntoView();
@@ -19,19 +25,18 @@ function WelcomeMessage({ t }) {
         <section className='scroll flow'>
           <div>
             <div className='word-scroll'>
-              <span>Writer of Code 👨🏻‍💻</span>
-              <span>Player of Guitar 🎸</span>
-              <span>Drinker of Coffee ☕</span>
-              <span>Fan of Formula 1 🏎️</span>
-              <span>Lover of Music 🎵</span>
-              <span>Speaker of Polish 🥟</span>
+              <span>{t('trait1')} 👨🏻‍💻</span>
+              <span>{t('trait2')} 🎸</span>
+              <span>{t('trait3')} ☕</span>
+              <span>{t('trait4')} 🏎️</span>
+              <span>{t('trait5')} 🎵</span>
+              <span>{t('trait6')} 🥟</span>
             </div>
           </div>
         </section>
-        <Button
-          body={t('connectMe')}
-          onClick={(e) => handleScroll(e, 'connect')}
-        />
+        <Button onClick={(e) => handleScroll(e, 'connect')}>
+          {t('connectMe')}
+        </Button>
         <Socials />
       </div>
     </section>

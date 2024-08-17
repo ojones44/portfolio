@@ -1,4 +1,6 @@
 // Component Imports
+// import { useTranslation } from 'react-i18next';
+import t from '../../../i18n/messages/translate';
 import { ButtonLink } from '../../Buttons';
 
 // Asset Imports
@@ -6,7 +8,9 @@ import pl from '../../../assets/pl.png';
 import en from '../../../assets/uk.png';
 import cvPDF from '../../../assets/oliverj_cv.pdf';
 
-function DesktopNav({ t, locale, langNavOpen }) {
+function DesktopNav({ locale, langNavOpen }) {
+  // const { t } = useTranslation();
+
   const handleScroll = (e, scrollTo) => {
     e.preventDefault();
     document.getElementById(scrollTo).scrollIntoView();
@@ -43,7 +47,7 @@ function DesktopNav({ t, locale, langNavOpen }) {
             link={cvPDF}
           />
         </li>
-        {/* <li>
+        <li>
           <button type='button' className='btn btn-flag' onClick={langNavOpen}>
             <img
               className='flag'
@@ -52,7 +56,7 @@ function DesktopNav({ t, locale, langNavOpen }) {
             />
             <span>{localStorage.getItem('language')}</span>
           </button>
-        </li> */}
+        </li>
       </ul>
     </nav>
   );

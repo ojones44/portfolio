@@ -2,12 +2,16 @@
 import './Projects.css';
 
 // Data Imports
+// import { useTranslation } from 'react-i18next';
+import t from '../../i18n/messages/translate';
 import projects from '../../data/projects';
 
 // Component Imports
 import ProjectCard from './sub-components/ProjectCard';
 
-function Projects({ t }) {
+function Projects() {
+  // const { t } = useTranslation();
+
   return (
     <section
       id='projects'
@@ -18,13 +22,12 @@ function Projects({ t }) {
         {projects.map((project) => (
           <ProjectCard
             key={project.id}
-            id={project.id}
             name={t(project.name)}
             desc={t(project.description)}
             projectId={project.projectId}
             repo={project.repo}
             demo={project.demo}
-            languages={project.languages}
+            projectLanguages={project.languages}
           />
         ))}
       </div>
